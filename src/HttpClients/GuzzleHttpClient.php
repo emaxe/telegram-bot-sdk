@@ -46,7 +46,7 @@ class GuzzleHttpClient implements HttpClientInterface
      */
     public function __construct(Client $client = null)
     {
-        $this->client = $client ?: new Client();
+        $this->client = $client ?: new Client(['verify' => false ]);
     }
 
     /**
